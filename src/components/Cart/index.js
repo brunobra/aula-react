@@ -5,20 +5,33 @@ import './index.css';
 import CartHeader from '../CartHeader';
 import Product from '../Product';
 
-const Cart = ({products}) => (
-  <div className="Cart">
-    <CartHeader
-      title="Carrinho"
-    />
-    {products.map((product) => (
-      <Product
-        key={product.id}
-        name={product.name}
-        price={product.price}
+const Cart = ({products}) => {
+  const getTotalPrice = (products) => {
+    let total = 0;
+
+    for (let product of products) {
+      total = total + product.price;
+    }
+
+    return total;
+  };
+
+  return (
+    <div className="Cart">
+      <CartHeader
+        title="Carrinho"
+        total={getTotalPrice(products)}
       />
-    ))}
-  </div>
-);
+      {products.map((product) => (
+        <Product
+          key={product.id}
+          name={product.name}
+          price={product.price}
+        />
+      ))}
+    </div>
+  );
+}
 
 Cart.propTypes = {
   products: PropTypes.arrayOf(
