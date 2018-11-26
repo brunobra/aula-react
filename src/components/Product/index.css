@@ -1,0 +1,6 @@
+.Product {
+	display: flex;
+	border-bottom: solid 2px #EEEEEE;
+	line-height: 3.5em;
+	padding-left: 10px;
+};
