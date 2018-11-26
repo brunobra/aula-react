@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 
-class CartTitle extends Component {
-  render() {
-    return (
-      <h1 className="CartTitle">
-        {this.props.title}
-      </h1>
-    );
-  }
-}
+const CartTitle = ({title}) => (
+  <h1 className="CartTitle">
+    {title}
+  </h1>
+);
 
 CartTitle.propTypes = {
   title: PropTypes.string

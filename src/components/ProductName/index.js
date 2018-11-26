@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './index.css';
 
-class ProductName extends Component {
-  render() {
-    return (
-      <span className="ProductName">
-        Produto
-      </span>
-    );
-  }
-}
+const ProductName = () => (
+  <span className="ProductName">
+    Produto
+  </span>
+);
 
 export default ProductName;
