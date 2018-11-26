@@ -24,10 +24,19 @@ class App extends Component {
     ]
   }
 
+  handleDeleteProduct(id) {
+    this.setState({
+      products: this.state.products.filter((product) => product.id !== id)
+    });
+  }
+
   render() {
     return (
       <div className="App">
-        <Cart products={this.state.products} />
+        <Cart
+          products={this.state.products}
+          onDeleteProduct={this.handleDeleteProduct.bind(this)}
+        />
       </div>
     );
   }

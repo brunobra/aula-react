@@ -1,0 +1,12 @@
+.ProductDelete {
+  margin-left: 10px;
+  border: none;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: white;
+  background-color: #e03456;
+  display: block;
+  padding: 20px 20px;
+  cursor: pointer;
+  outline: none;
+}
