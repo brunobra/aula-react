@@ -3,5 +3,6 @@
   width: 500px;
   margin: 70px auto;
   border-radius: 10px;
+  overflow: hidden;
 };
 
