@@ -1,13 +1,16 @@
 import React from 'react';
-import './index.css';
-
-import ProductName from '../ProductName';
-import ProductPrice from '../ProductPrice';
+import './Product.css';
+import './ProductName.css';
+import './ProductPrice.css';
 
 const Product = () => (
   <div className="Product">
-    <ProductName />
-    <ProductPrice />
+     <span className="ProductName">
+      Produto
+    </span>
+    <span className="ProductPrice">
+      R$ 20,00
+    </span>
   </div>
 );
 
