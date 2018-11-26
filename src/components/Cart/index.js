@@ -8,7 +8,9 @@ class Cart extends Component {
   render() {
     return (
       <div className="Cart">
-        <CartHeader />
+        <CartHeader
+          title="Carrinho"
+        />
         <Product />
         <Product />
         <Product />

@@ -8,7 +8,7 @@ class CartHeader extends Component {
   render() {
     return (
       <div className="CartHeader">
-        <CartTitle />
+        <CartTitle title={this.props.title} />
         <CartTotal />
       </div>
     );
