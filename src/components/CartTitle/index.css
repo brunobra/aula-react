@@ -1,4 +1,5 @@
 .CartTitle {
+  flex-grow: 1;
   font-size: 1.8em;
   font-weight: 500;
 };
