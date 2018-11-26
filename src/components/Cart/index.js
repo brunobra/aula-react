@@ -23,7 +23,7 @@ const Cart = ({products}) => (
 Cart.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       name: PropTypes.string,
       price: PropTypes.number
     })
