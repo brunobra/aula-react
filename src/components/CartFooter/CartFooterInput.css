@@ -1,0 +1,8 @@
+.CartFooterInput {
+  height: 30px;
+  margin-right: 10px;
+  flex-grow: 1;
+  padding: 0 0 0 10px;
+  border: unset;
+  border-radius: 5px;
+};

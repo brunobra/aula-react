@@ -4,8 +4,9 @@ import './index.css';
 
 import CartHeader from '../CartHeader';
 import Product from '../Product';
+import CartFooter from '../CartFooter';
 
-const Cart = ({products, onDeleteProduct}) => {
+const Cart = ({products, onDeleteProduct, onAddProduct}) => {
   const getTotalPrice = (products) => {
     let total = 0;
 
@@ -30,6 +31,7 @@ const Cart = ({products, onDeleteProduct}) => {
           onDelete={() => onDeleteProduct(product.id)}
         />
       ))}
+      <CartFooter onAddProduct={onAddProduct} />
     </div>
   );
 }
@@ -42,7 +44,8 @@ Cart.propTypes = {
       price: PropTypes.number
     })
   ),
-  onDeleteProduct: PropTypes.func.isRequired
+  onDeleteProduct: PropTypes.func.isRequired,
+  onAddProduct: PropTypes.func.isRequired
 };
 
 Cart.defaultProps = {

@@ -1,0 +1,10 @@
+.CartFooterButton {
+	height: 30px;
+	border: unset;
+	text-transform: uppercase;
+	color: white;
+	background-color: #0314B4;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+}

@@ -25,9 +25,15 @@ class App extends Component {
   }
 
   handleDeleteProduct(id) {
-    this.setState({
-      products: this.state.products.filter((product) => product.id !== id)
-    });
+    this.setState(prevState => ({
+      products: prevState.products.filter((product) => product.id !== id)
+    }));
+  }
+
+  handleAddProduct(product) {
+    this.setState(prevState => ({
+      products: [...prevState.products, product]
+    }))
   }
 
   render() {
@@ -36,6 +42,7 @@ class App extends Component {
         <Cart
           products={this.state.products}
           onDeleteProduct={this.handleDeleteProduct.bind(this)}
+          onAddProduct={this.handleAddProduct.bind(this)}
         />
       </div>
     );
